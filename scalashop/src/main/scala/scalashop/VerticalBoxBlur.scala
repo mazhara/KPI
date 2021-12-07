@@ -6,10 +6,10 @@ import scalashop.HorizontalBoxBlur.blur
 object VerticalBoxBlurRunner {
 
   val standardConfig = config(
-    Key.exec.minWarmupRuns -> 5,
-    Key.exec.maxWarmupRuns -> 10,
-    Key.exec.benchRuns -> 10,
-    Key.verbose -> true
+    Key.exec.minWarmupRuns := 5,
+    Key.exec.maxWarmupRuns := 10,
+    Key.exec.benchRuns := 10,
+    Key.verbose := true
   ) withWarmer (new Warmer.Default)
 
   def main(args: Array[String]): Unit = {
